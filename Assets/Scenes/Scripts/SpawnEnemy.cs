@@ -9,7 +9,7 @@ public class SpawnEnemy : MonoBehaviour
 
     private Transform[] _spawnPoints;
 
-    void Start()
+    private void Start()
     {
         _spawnPoints = new Transform[_points.childCount];
 
@@ -18,10 +18,10 @@ public class SpawnEnemy : MonoBehaviour
             _spawnPoints[i] = _points.GetChild(i);
         }
 
-        StartCoroutine(Spawner());
+        StartCoroutine(Spawn());
     }
 
-    private IEnumerator Spawner()
+    private IEnumerator Spawn()
     {
         var delay = new WaitForSeconds(2);
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
-    void OnEnable()
+    private void OnEnable()
     {
         Destroy(gameObject, 5f);
     }
